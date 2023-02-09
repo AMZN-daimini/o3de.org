@@ -12,7 +12,7 @@ This tutorial provides an introduction to project configuration and building in 
 * Create a new O3DE project.
 * Build the O3DE project.
 
-At the end of the tutorial, you'll have a new O3DE project based on the default "standard" project template, ready to open in **O3DE Editor**.
+At the end of the tutorial, you'll have a new O3DE project based on the default project template, ready to open in **O3DE Editor**.
 
 {{< youtube-width id="5VtWprJJBaw" title="O3DE Project Creation Using Project Manager" >}}
 
@@ -24,7 +24,7 @@ The following instructions assume that you have:
 * Met all hardware and software requirements listed in [O3DE System Requirements](/docs/welcome-guide/requirements).
 
 {{< note >}}
-If you set up O3DE from GitHub and chose the [source engine](/docs/user-guide/appendix/glossary#source-engine) build type, we recommend that you create your project using the command line interface (CLI) instructions in [Creating Projects Using the CLI](../creating-projects-using-cli).
+If you set up O3DE from GitHub and chose the [source engine](/docs/user-guide/appendix/glossary#source-engine) build type, you need to create a project from the command line and build it before you'll have a version of **Project Manager** that will work with your new project. Follow the instructions in [Creating Projects Using the CLI](../creating-projects-using-cli) to create a project for your source engine.
 {{< /note >}}
 
 ## Launch Project Manager
@@ -84,6 +84,14 @@ The first build may take some time to complete if the required third-party packa
     {{< /note >}}
 
     When the build completes, you can find the project binaries in your project directory under `build/<platform>/bin/profile`.
+    
+    {{< note >}}
+**(Development/22.10 release branch)** On Windows, if you have multiple versions of Visual Studio installed, Project Manager will build with the highest version detected. To specify the version of Visual Studio, use the CMake environment variable `CMAKE_GENERATOR_PLATFORM` with a [value from the CMake generator list](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html#visual-studio-generators).
+    {{< /note >}}
+
+    {{< note >}}
+On Windows, if you have multiple versions of Visual Studio installed, Project Manager will build with the highest version detected. To specify the version of Visual Studio, use the CMake environment variable `CMAKE_GENERATOR_PLATFORM` with a [value from the CMake generator list](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html#visual-studio-generators).
+    {{< /note >}}
 
 1. To open your built project in the Editor, move your pointer inside your project's icon box and choose **Open Editor**.
 

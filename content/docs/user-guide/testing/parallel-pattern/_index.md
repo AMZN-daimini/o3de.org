@@ -87,7 +87,7 @@ The recommended structure is the following:
 
 ![Folder Structure](/images/user-guide/testing/parallel-pattern/folder-structure.png)
 
-* **/**  - The root folder of the tests should contain a `CMakeLists.txt` file and the test suites for the feature. A feature must contain one test suite file per type (Smoke, Main, Periodic, and Sandbox). These files will only be run by the external Python interpeter.
+* **/**  - The root folder of the tests should contain a `CMakeLists.txt` file and the test suites for the feature. A feature must contain one test suite file per type (Smoke, Main, Periodic, and Sandbox). These files will only be run by the external Python interpreter.
 
 * **utils/** (Optional) - A `utils` directory provides utilities common to multiple tests for the `TestSuite` files. Utilities for specific tests should be part of their test files.
   
@@ -284,7 +284,7 @@ If everything works correctly, the test run will show the following results:
 
 ```
 ============================================ test session starts ========================================
-platform win32 -- Python 3.7.10, pytest-5.3.2, py-1.9.0, pluggy-0.13.1
+platform win32 -- Python 3.10.5, pytest-6.2.5, py-1.11.0, pluggy-0.13.1
 rootdir: <O3DE root dir>
 plugins: mock-2.0.0, timeout-1.3.4, ly-test-tools-1.0.0
 collected 2 items
@@ -405,7 +405,7 @@ Be careful when placing a test in a batch, parallel, or shared pool! All tests s
 
 Due to the lack of support for setup, teardown, or test wrapping in batch, parallel, and shared tests, avoid placing any tests that rely on this support into a shared pool. 
 
-An examples of a test which could be batched, but not run in parallel, is a physics test that makes a modification to the project wide material library at the start and restores to the default setting when finishing. By changing the state of a resource shared between O3DE Editor instances (in disk storage), it could cause parallel tests to fail.
+An example of a test which could be batched, but not run in parallel, is a physics test that makes a modification to the project wide physics configuration at the start and restores to the default setting when finishing. By changing the state of a resource shared between O3DE Editor instances (in disk storage), it could cause parallel tests to fail.
 
 In general, tests that require interacting with I/O may have these problems. As a general rule, it's better to make your test do changes in memory rather than on disk.
 
@@ -420,7 +420,7 @@ Certain test modes can be disabled or managed through command-line options:
 ## Best practices
 
 * **Don’t create a level unless necessary**. Use an existing empty level and don’t save the changes when the test is over.
-* **Tests should be be self-contained**. No external tools should determine if the test has passed or failed. Instead, O3DE Editor should do this work. Use the one of the editor's return codes as result of the test, `0x0` for success and `0xF` for failure.
+* **Tests should be self-contained**. No external tools should determine if the test has passed or failed. Instead, O3DE Editor should do this work. Use the one of the editor's return codes as result of the test, `0x0` for success and `0xF` for failure.
 * **Don’t read the O3DE Editor log file directly**. To read O3DE Editor log information, use the `DebugTraceBus` and `Tracer` utilities. The `DebugTraceBus` is able to capture all logged information, without needing to create an I/O dependency on a file.
     
 ```python

@@ -425,6 +425,7 @@ You can add inline O3DE GUI icons with the `icon` shortcode. Icon `.svg` files a
 | picker.svg | {{< icon "picker.svg" >}} |
 | pin-button.svg | {{< icon "pin-button.svg" >}} |
 | play.svg | {{< icon "play.svg" >}} |
+| popout-overlay.svg | {{< icon "popout-overlay.svg" >}} |
 | prefab.svg | {{< icon "prefab.svg" >}} |
 | prefab-edit.svg | {{< icon "prefab-edit.svg" >}} |
 | processing.svg | {{< icon "processing.svg" >}} |
@@ -543,3 +544,17 @@ Embed Youtube videos in your page by using the `youtube-width` shortcode. The `y
     Output:
 
     {{< youtube-width id="CQmjAxr7LZs" title="What is O3DE?" width="100%" >}}
+
+## Embedding mathematical formulas in TeX and MathML
+
+You can embed mathematical formulas using TeX and MathML input formats, for more information on the MathJax version 3.0 display engine, please refer to the MathJax [documentation](https://docs.mathjax.org/en/latest/index.html).
+
+**Example Usage**
+
+```markdown
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+```
+
+**Example Output**
+
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$

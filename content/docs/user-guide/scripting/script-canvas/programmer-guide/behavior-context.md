@@ -5,7 +5,7 @@ description: Learn about the important relationship between Script Canvas and th
 weight: 100
 ---
 
-The [behavior context](/docs/user-guide/programming/components/reflection/behavior-context) in **Open 3D Engine (O3DE)** is a reflection system that exposes C++ classes, methods, constants, data types, and the O3DE event mechanisms, providing the necessary bindings for scripting environments to invoke the code at runtime. Script Canvas uses the script bindings to automatically create new nodes in the Node Palette for use in your Script Canvas graphs. Using these new nodes, you can call the C++ methods, get and set properties, retrieve constants, broadcast and handle events, and pass your custom data types through the node's data pins.
+The [behavior context](/docs/user-guide/programming/components/reflection/behavior-context) in **Open 3D Engine (O3DE)** is a reflection system that exposes C++ classes, methods, constants, data types, and the O3DE event mechanisms, providing the necessary bindings for scripting environments to invoke the code at runtime. **Script Canvas** uses the script bindings to automatically create new nodes in the Node Palette for use in your Script Canvas graphs. Using these new nodes, you can call the C++ methods, get and set properties, retrieve constants, broadcast and handle events, and pass your custom data types through the node's data pins.
 
 In short, use the behavior context with Script Canvas to do the following:
 
@@ -26,13 +26,17 @@ The core Script Canvas code is built as a static library that is linked into the
 
 When you use the behavior context, you do not need to write any code specific to Script Canvas. However, it is important that the way in which your code is reflected to the behavior context remains intuitive and practical in a visual scripting environment.
 
-The combination of the Script Canvas and behavior context archictectures includes the following benefits:
+The combination of the Script Canvas and behavior context architectures includes the following benefits:
 
 + Support for the AZ::Event and EBus event systems enable your scripts to use decoupled, event-driven programming paradigms.
 + Script Canvas can use functionality exposed through the behavior context from any Gem, enabling any Gem to enhance Script Canvas.
 + Support for Gems reflecting C++ code through the behavior context means there is no need to add Gem dependencies to Script Canvas.
 
 ## Example: Static functions
+
+{{< note >}}
+Refer to [Custom Free Function Nodes](/docs/user-guide/scripting/script-canvas/programmer-guide/custom-nodes/custom-free-function-nodes/) for an approach with a lighter overhead.
+{{< /note >}}
 
 To demonstrate how C++ code can become a Script Canvas node, this example uses the behavior context to reflect a few simple, static math library functions.
 

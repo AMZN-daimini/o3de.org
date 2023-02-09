@@ -20,7 +20,7 @@ Take only the bits your project needs! O3DE is composed of *Gems*, which are mod
 
 O3DE supports Gems with precompiled binaries and libraries. Adding or removing precompiled Gems does not require you to recompile O3DE. Upgrading to new engine versions only requires that you recompile projects.
 
-For more information, see [the O3DE Gems documentation](/docs/user-guide/gems/overview).
+For more information, see [the O3DE Gems documentation](/docs/user-guide/gems/).
 
 ## Build with familiar tools
 
@@ -60,8 +60,7 @@ Some of Atom's features include:
 
 * High resolution reflection cubemaps.
 
-* Pipeline interface abstraction allowing for platform-independent creation of forward+, deferred, or hybrid
-renderers via a pass system.
+* Pipeline interface abstraction allowing for platform-independent creation of Forward+, Deferred, or hybrid renderers via a pass system. Supports Forward+ by default.
 
 * Support for parallax correction, mixed reflections per render pass, and runtime editing and visualization for lighting artists.
 

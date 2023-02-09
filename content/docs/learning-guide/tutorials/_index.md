@@ -16,6 +16,12 @@ Do you have O3DE installed and you aren't sure where to start? How about creatin
 | - | - |
 | [Create your first O3DE game: Pong](first-project/) | Start from a new O3DE project and build your first game: Pong! What's "Pong"? Two paddles square off, in a ball-based battle to land the highest score. This tutorial series will introduce you to basic game UI development, scripting, and controls in O3DE. |
 
+## Animation
+
+| Tutorial | Description |
+| - | - |
+| [Data Driven Root Motion](animation/data-driven-root-motion) | Learn about data driven root motion and how to apply it to actors. |
+
 ## Artificial Intelligence
 
 | Tutorial | Description |
@@ -41,6 +47,7 @@ Do you have O3DE installed and you aren't sure where to start? How about creatin
 | Tutorial | Description |
 | - | - |
 | [Create a Level](environments/create-a-level) | Create a level for O3DE. |
+| [Create Terrain from Images](environments/create-terrain-from-images) | Learn to create terrain using images. |
 
 ## Extend O3DE Editor
 
@@ -50,6 +57,14 @@ Extend **O3DE Editor** by creating a custom tool Gem. A tool is a dockable widge
 | - | - |
 | [Create a Custom Tool Gem in C++](extend-the-editor/shape-example-cpp.md) | Extend the Editor by creating a custom tool Gem that's written in C++. Learn how to use the **CppToolGem** template, and practice C++ development with [Qt](https://wiki.qt.io/Main), the O3DE Tools UI API, and other O3DE APIs. |
 | [Create a Custom Tool Gem in Python](extend-the-editor/shape-example-py.md) | Extend the Editor by creating a custom tool Gem that's written in Python. Learn how to use the **PythonToolGem** template, and practice Python development with [Qt](https://wiki.qt.io/Main), the O3DE Tools UI API, and other O3DE APIs.|
+
+## Input and movement
+
+Learn how to use the keyboard, mouse, and other input devices to move entities.
+
+| Tutorial | Description |
+| - | - |
+| [Grid-based Movement](input-and-movement/grid-based-movement) | Learn how to implement grid-based movement from input device events. |
 
 ## Multiplayer
 
@@ -70,3 +85,11 @@ Create physics simulations in O3DE with NVIDIA's PhysX system. The tutorials in 
 | Tutorial | Description |
 | - | - |
 | [PostFX Shape Weight Modifier](postfx/use-postfx-shape-weight-modifier) | Use a **PostFX Shape Weight Modifier** component to modify exposure control in O3DE. This example demonstrates how to modify post-processing effects (PostFX) at runtime. |
+
+## Rendering
+
+| Tutorial | Description |
+| - | - |
+| [Create a StandardPBR material](rendering/create-standardpbr-material) | This tutorial walks you through creating your first StandardPBR material using the Material Editor. |
+| [Material Types and Shaders](rendering/get-started-materialtypes-and-shaders) | A beginner-level tutorial introducing material types and shaders in Atom. Learn how to create a custom material type with a simple AZSL shader. |
+| [Vertex Deformation for Vegetation Bending Tutorial](rendering/vegetation-bending-tutorial) | Use the **Atom Renderer** to create a custom material type with custom vertex shaders for vegetation bending. |

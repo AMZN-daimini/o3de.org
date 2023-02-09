@@ -11,16 +11,16 @@ O3DE's PhysX system acts upon entities to create realistic physical effects such
 + [PhysX Gems](#physx-gems)
 + [PhysX Components](#physx-components)
 + [PhysX Configuration](#physx-configuration)
-+ [PhysX Materials](#physx-materials)
++ [Physics Materials](#physics-materials)
 + [PhysX Debugging](#physx-debugging)
-+ [Configuring the PhysX System](/docs/user-guide/interactivity/physics/nvidia-physx/configuring/)
-+ [Physics materials](/docs/user-guide/interactivity/physics/nvidia-physx/materials/)
++ [Configuring the PhysX System](/docs/user-guide/interactivity/physics/nvidia-physx/configuring/))
 + [PhysX Scene Queries](/docs/user-guide/interactivity/physics/nvidia-physx/scene-queries/)
 + [PhysX Simulated Bodies](/docs/user-guide/interactivity/physics/nvidia-physx/simulated-bodies/)
 + [Dynamic joints with PhysX](/docs/user-guide/interactivity/physics/nvidia-physx/joint-intro/)
 + [Debugging PhysX](/docs/user-guide/interactivity/physics/debugging/)
 + [PhysX Best Practices](/docs/user-guide/interactivity/physics/nvidia-physx/best-practices/)
 + [Simulate cloth with NVIDIA Cloth](/docs/user-guide/interactivity/physics/nvidia-cloth/)
++ [Determinism](#determinism)
 <!-- + [Simulated destruction with NVIDIA Blast](/docs/user-guide/interactivity/physics/nvidia-blast/) -->
 
 ## PhysX Gems 
@@ -54,9 +54,9 @@ Use the **PhysX Configuration** window in O3DE Editor to configure global settin
 
 For more information, see [Configuring the PhysX System](/docs/user-guide/interactivity/physics/nvidia-physx/configuring/).
 
-## PhysX Materials 
+## Physics Materials 
 
-PhysX materials allow simulation properties to be configured by entity. Materials customize how an object reacts when it hits a surface and control qualities like friction and bounciness. You use the **Asset Editor** to create a material library, assign the library in PhysX Configuration, and then select a specific material from the library for the collider.
+Physics materials allow simulation properties to be configured by entity. Materials customize how an object reacts when it hits a surface and control qualities like friction and bounciness. You use the **Asset Editor** to create a physics material and then assign a material to the collider.
 
 For more information, see [Physics materials](/docs/user-guide/interactivity/physics/nvidia-physx/materials/).
 
@@ -71,3 +71,6 @@ To verify the implementation of interactions in the simulated world, the followi
   For information on configuring O3DE's connection to PVD, see [Debugger Configuration](/docs/user-guide/interactivity/physics/nvidia-physx/configuring/configuration-debugger/).
 
 For more information, see [Debugging PhysX](/docs/user-guide/interactivity/physics/debugging/).
+
+## Determinism
+Although PhysX does have support for [**deterministic behavior**](https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/BestPractices.html#determinism), it requires specific conditions when constructing and stepping physics scenes, which are not met in O3DE. Furthermore, the physics system in O3DE interacts with many other systems which are not deterministic, such as animation, scripting and asynchronous asset loading. Therefore, the PhysX simulation in O3DE is not expected to be deterministic.
